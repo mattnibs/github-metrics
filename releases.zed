@@ -1,0 +1,23 @@
+const type = <release_asset={
+  ts:time,
+  release:string,
+  url:string,
+  id:int64,
+  node_id:string,
+  name:string,
+  label:string,
+  content_type:string,
+  state:string,
+  size:uint64,
+  download_count:uint64,
+  created_at:time,
+  updated_at:time,
+  browser_download_url:string
+}>
+const ts = now()
+over this
+| over assets with release=name => (
+  yield {ts, release, ...this}
+)
+| drop uploader
+| shape(this, type)
