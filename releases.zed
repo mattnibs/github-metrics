@@ -1,3 +1,4 @@
+const ts = now()
 const type = <release_asset={
   ts:time,
   release:string,
@@ -14,7 +15,6 @@ const type = <release_asset={
   updated_at:time,
   browser_download_url:string
 }>
-const ts = now()
 over this
 | over assets with release=name => (
   yield {ts, release, ...this}

@@ -1,0 +1,8 @@
+const type = <views={
+  ts:time,
+  count:uint64,
+  uniques:uint64
+}>
+over views
+| rename ts := timestamp
+| shape(this, type)

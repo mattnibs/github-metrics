@@ -1,0 +1,10 @@
+const ts = now()
+const type = <referrer={
+  ts:time,
+  referrer:string,
+  count:uint64,
+  uniques:uint64
+}>
+over this
+| yield {ts, ...this}
+| shape(this, type)

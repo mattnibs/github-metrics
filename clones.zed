@@ -1,0 +1,8 @@
+const type = <clones={
+  ts:time,
+  count:uint64,
+  uniques:uint64
+}>
+over clones
+| rename ts := timestamp
+| shape(this, type)

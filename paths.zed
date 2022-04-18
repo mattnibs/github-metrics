@@ -1,0 +1,11 @@
+const ts = now()
+const type = <path={
+  ts:time,
+  path:string,
+  title:string,
+  count:uint64,
+  uniques:uint64
+}>
+over this
+| yield {ts, ...this}
+| shape(this, type)
