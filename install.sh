@@ -40,7 +40,7 @@ dir=$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)
 cat <<EOF > cron
 GITHUB_TOKEN=$GITHUB_TOKEN
 ZED_LAKE=$ZED_LAKE
-PATH=/usr/bin:/bin:/usr/local/bin:$HOME/bin/go
+PATH=/usr/bin:/bin:/usr/local/bin:$HOME/go/bin
 EOF
 
 sed -e "s/USER/$(whoami)/" cron.tmpl \
